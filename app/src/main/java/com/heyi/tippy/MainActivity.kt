@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.my_toolbar))
+
         etBaseAmount = findViewById(R.id.etBaseAmount)
         seekBarTip = findViewById(R.id.seekBarTip)
         tvTipPercentLabel = findViewById(R.id.tvTipPercentLabel)
