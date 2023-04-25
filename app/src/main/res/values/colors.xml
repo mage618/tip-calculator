@@ -3,10 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary_blue">#244B6E</color>
-    <color name="darker_blue">#07256E</color>
-    <color name="background_blue">#EFECFB</color>
-
-    <color name="color_worst_tip">#DC1E0B</color>
-    <color name="color_best_tip">#35BA01</color>
+    <!-- Catppuccin Macchiato Colors -->
+    <color name="base">#24273a</color>
+    <color name="text">#cad3f5</color>
+    <color name="surface1">#494d64</color>
+    <color name="rosewater">#f4bdb6</color>
+    <color name="red">#ed8796</color>
+    <color name="green">#a6da95</color>
+    <color name="blue">#8aadf4</color>
 </resources>

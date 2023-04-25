@@ -80,8 +80,8 @@ class MainActivity : AppCompatActivity() {
         // creates a gradient from red to green for the color of the tip description
         val color = ArgbEvaluator().evaluate(
             tipPercent.toFloat() / seekBarTip.max,
-            ContextCompat.getColor(this, R.color.color_worst_tip),
-            ContextCompat.getColor(this, R.color.color_best_tip)
+            ContextCompat.getColor(this, R.color.red),
+            ContextCompat.getColor(this, R.color.green)
         ) as Int
         tvTipDescription.setTextColor(color)
     }
