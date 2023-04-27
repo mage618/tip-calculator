@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <!-- Views on left side -->
 
     <androidx.appcompat.widget.Toolbar
@@ -27,11 +26,12 @@
         android:id="@+id/tvBaseLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="48dp"
         android:text="Base"
-        android:textColor="@color/text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
@@ -42,8 +42,8 @@
         android:layout_marginTop="32dp"
         android:text="24%"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold"
         android:textColor="@color/text"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel" />
 
@@ -70,6 +70,30 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+
+    <TextView
+        android:id="@+id/tvSplitBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Split By #"
+        android:textColor="@color/text"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalLabel" />
+
+    <TextView
+        android:id="@+id/tvPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Per Person"
+        android:textColor="@color/text"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvSplitBy"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="413dp" />
 
     <!-- Views on right side -->
 
@@ -103,8 +127,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textSize="24sp"
         android:textColor="@color/text"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/tvTipLabel"
         app:layout_constraintStart_toEndOf="@+id/tvTipLabel"
         tools:layout_editor_absoluteY="145dp"
@@ -115,8 +139,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:textSize="24sp"
         android:textColor="@color/text"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@id/tvTotalLabel"
         app:layout_constraintStart_toEndOf="@+id/tvTotalLabel"
         tools:layout_editor_absoluteY="200dp"
@@ -129,9 +153,9 @@
         android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Made with 😡 by mage618"
-        android:textColor="@color/text"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -141,10 +165,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
         android:textColor="@color/text"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
         app:layout_constraintStart_toStartOf="@+id/seekBarTip"
         app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
         tools:text="Acceptable" />
+
+    <SeekBar
+        android:id="@+id/seekBarSplit"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:min="1"
+        android:max="15"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSplitBy"
+        app:layout_constraintStart_toEndOf="@+id/tvSplitBy"
+        app:layout_constraintTop_toTopOf="@+id/tvSplitBy" />
+
+    <TextView
+        android:id="@+id/tvPerPersonAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPerPerson"
+        app:layout_constraintStart_toEndOf="@+id/tvPerPerson"
+        tools:text="0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
